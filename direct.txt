@@ -1,0 +1,8 @@
+ssl-lvlt.cdn.ea.com
+origin-a.akamaihd.net
+epicgames-download1.akamaized.net
+xboxlive.com
+xboxservices.com
+aeventlog.beacon.qq.com
+dataflow.biliapi.com
+zaimanhua.com
