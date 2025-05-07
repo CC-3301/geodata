@@ -79,7 +79,6 @@ metok.sys.miui.com
 tmfsdk.m.qq.com
 tmfsdk4.m.qq.com
 tbm.snssdk.com
-othstr.beacon.qq.com
 tools.3g.qq.com
 tmfsdktcp.m.qq.com
 h.trace.qq.com
