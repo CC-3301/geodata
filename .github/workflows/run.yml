@@ -171,13 +171,12 @@ jobs:
         run: |
           cd custom || exit 1
           mkdir -p ../community/data
-          curl -sSL ${Anti_AD} | grep -v '#' | sed '/^\s*$/d' | grep -viE 'dataflow.biliapi.com|beacon.qq.com' >> ../community/data/anti-ad
+          curl -sSL ${Anti_AD} | grep -v '#' | sed '/^\s*$/d' >> ../community/data/anti-ad
           cat ./fuckmiui.txt | grep -v '#' | sed '/^\s*$/d' >> ../community/data/fuck-miui
           cat ../community/data/anti-ad >> ../community/data/reject_tmp
           cat ../community/data/fuck-miui >> ../community/data/reject_tmp
-          cat ../community/data/category-ads-all >> ../community/data/reject_tmp
           cat ../community/data/category-httpdns-cn >> ../community/data/reject_tmp
-          cat ../community/data/reject_tmp | sort --ignore-case -u | grep -viE 'dataflow\.biliapi\.com|beacon\.qq\.com' > ../community/data/reject
+          cat ../community/data/reject_tmp | sort --ignore-case -u | grep -viE 'dataflow.biliapi.com|beacon.qq.com' > ../community/data/reject
           rm -f ../community/data/reject_tmp
           echo "ipleak.net" >> ../community/data/geolocation-\!cn
           echo "browserleaks.org" >> ../community/data/geolocation-\!cn
