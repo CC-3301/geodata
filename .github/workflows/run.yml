@@ -84,7 +84,7 @@ jobs:
         run: |
           curl -sSL ${CUSTOM_PROXY} | grep -Ev ":@cn" | perl -ne '/^((full|regexp|keyword):[^:]+)(\n$|:@.+)/ && print "$1\n"' | sort --ignore-case -u > proxy-reserve.txt
 
-      - name: Add proxy, direct and reject domains from "hidden" branch to appropriate temp files
+      - name: Add proxy and direct domains from "hidden" branch to appropriate temp files
         run: |
           cat ./proxy.txt >> temp-proxy.txt
           cat ./direct.txt >> temp-direct.txt
