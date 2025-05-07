@@ -177,7 +177,7 @@ jobs:
           cat ../community/data/fuck-miui >> ../community/data/reject_tmp
           cat ../community/data/category-ads-all >> ../community/data/reject_tmp
           cat ../community/data/category-httpdns-cn >> ../community/data/reject_tmp
-          sort --ignore-case -u ../community/data/reject_tmp | grep -v "dataflow.biliapi.com" | grep -v "beacon.qq.com" > ../community/data/reject
+          sort --ignore-case -u ../community/data/reject_tmp | grep -viE "dataflow.biliapi.com|beacon.qq.com" > ../community/data/reject
           rm -f ../community/data/reject_tmp
           echo "ipleak.net" >> ../community/data/geolocation-\!cn
           echo "browserleaks.org" >> ../community/data/geolocation-\!cn
