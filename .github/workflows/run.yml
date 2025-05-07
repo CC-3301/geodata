@@ -178,8 +178,8 @@ jobs:
           cat ../community/data/category-ads-all >> ../community/data/reject
           cat ../community/data/category-httpdns-cn >> ../community/data/reject
           sort --ignore-case -u ../community/data/reject
-          grep -v "aeventlog.beacon.qq.com" ../community/data/reject > ../community/data/reject
-          grep -v "dataflow.biliapi.com" ../community/data/reject > ../community/data/reject
+          grep -v "aeventlog.beacon.qq.com" ../community/data/reject
+          grep -v "dataflow.biliapi.com" ../community/data/reject
           echo "ipleak.net" >> ../community/data/geolocation-\!cn
           echo "browserleaks.org" >> ../community/data/geolocation-\!cn
           echo "browserleaks.com" >> ../community/data/geolocation-\!cn
