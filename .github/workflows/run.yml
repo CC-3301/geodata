@@ -173,11 +173,12 @@ jobs:
           mkdir -p ../community/data
           curl -sSL ${Anti_AD} | grep -v '#' | sed '/^\s*$/d' >> ../community/data/anti-ad
           cat ./fuckmiui.txt | grep -v '#' | sed '/^\s*$/d' >> ../community/data/fuck-miui
-          cat ../community/data/anti-ad >> ../community/data/reject
-          cat ../community/data/fuck-miui >> ../community/data/reject
-          cat ../community/data/category-ads-all >> ../community/data/reject
-          cat ../community/data/category-httpdns-cn >> ../community/data/reject
-          grep -v -e 'beacon.qq.com' -e 'dataflow.biliapi.com' ../community/data/reject | sort --ignore-case -u > tmp_reject && mv tmp_reject ../community/data/reject
+          cat ../community/data/anti-ad >> ../community/data/reject_tmp
+          cat ../community/data/fuck-miui >> ../community/data/reject_tmp
+          cat ../community/data/category-ads-all >> ../community/data/reject_tmp
+          cat ../community/data/category-httpdns-cn >> ../community/data/reject_tmp
+          grep -v -e 'beacon.qq.com' -e 'dataflow.biliapi.com' ../community/data/reject_tmp | sort --ignore-case -u > ../community/data/reject
+          rm -f ../community/data/reject_tmp
           echo "ipleak.net" >> ../community/data/geolocation-\!cn
           echo "browserleaks.org" >> ../community/data/geolocation-\!cn
           echo "browserleaks.com" >> ../community/data/geolocation-\!cn
