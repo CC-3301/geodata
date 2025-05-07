@@ -175,6 +175,7 @@ jobs:
           cat ./fuckmiui.txt | grep -v '#' | sed '/^\s*$/d' >> ../community/data/fuck-miui
           cat ../community/data/anti-ad >> ../community/data/reject_tmp
           cat ../community/data/fuck-miui >> ../community/data/reject_tmp
+          cat ../community/data/category-ads-all >> ../community/data/reject_tmp
           cat ../community/data/category-httpdns-cn >> ../community/data/reject_tmp
           cat ../community/data/reject_tmp | grep -viE 'dataflow.biliapi.com|beacon.qq.com' | sort --ignore-case -u > ../community/data/reject
           rm -f ../community/data/reject_tmp
