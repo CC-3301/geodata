@@ -90,8 +90,8 @@ jobs:
 
       - name: Sort and generate redundant lists
         run: |
-          cat temp-proxy.txt | sort --ignore-case -u > proxy-list-with-redundant
-          cat temp-direct.txt | sort --ignore-case -u > direct-list-with-redundant
+          sort --ignore-case -u temp-proxy.txt > proxy-list-with-redundant
+          sort --ignore-case -u temp-direct.txt > direct-list-with-redundant
 
       - name: Remove redundant domains
         run: |
