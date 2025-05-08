@@ -86,8 +86,8 @@ jobs:
 
       - name: Add proxy and direct domains from "hidden" branch to appropriate temp files
         run: |
-          cat ./proxy.txt >> temp-proxy.txt
-          cat ./direct.txt >> temp-direct.txt
+          cat ./resouces/proxy.txt >> temp-proxy.txt
+          cat ./resouces/direct.txt >> temp-direct.txt
 
       - name: Sort and generate redundant lists
         run: |
@@ -172,11 +172,11 @@ jobs:
           cd custom || exit 1
           mkdir -p ../community/data
           curl -sSL ${Anti_AD} | grep -v '#' | sed '/^\s*$/d' >> ../community/data/anti-ad
-          cat ./fuckmiui.txt | grep -v '#' | sed '/^\s*$/d' >> ../community/data/fuck-miui
+          cat ./resouces/fuckmiui.txt | grep -v '#' | sed '/^\s*$/d' >> ../community/data/fuck-miui
           cat ../community/data/anti-ad >> ../community/data/reject_tmp
           cat ../community/data/fuck-miui >> ../community/data/reject_tmp
           cat ../community/data/category-httpdns-cn >> ../community/data/reject_tmp
-          grep -vi -f ./reject-need-remove.txt ../community/data/reject_tmp | sort --ignore-case -u > ../community/data/reject
+          grep -vi -f ./resouces/reject-need-remove.txt ../community/data/reject_tmp | sort --ignore-case -u > ../community/data/reject
           rm -f ../community/data/reject_tmp
           echo "ipleak.net" >> ../community/data/geolocation-\!cn
           echo "browserleaks.org" >> ../community/data/geolocation-\!cn
