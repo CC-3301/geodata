@@ -95,7 +95,7 @@ jobs:
 
       - name: Remove redundant domains
         run: |
-          chmod +x findRedundantDomain.py
+          chmod +x ./resouces/findRedundantDomain.py
           ./resouces/findRedundantDomain.py ./direct-list-with-redundant ./direct-list-deleted-unsort
           ./resouces/findRedundantDomain.py ./proxy-list-with-redundant ./proxy-list-deleted-unsort
           [ ! -f "direct-list-deleted-unsort" ] && touch direct-list-deleted-unsort
