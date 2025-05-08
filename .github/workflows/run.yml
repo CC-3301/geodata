@@ -107,8 +107,8 @@ jobs:
 
       - name: Remove domains from "need-to-remove" lists
         run: |
-          sort ./direct-need-remove.txt > ./direct-need-to-remove-sort.txt
-          sort ./proxy-need-remove.txt > ./proxy-need-to-remove-sort.txt
+          sort ./resouces/direct-need-remove.txt > ./direct-need-to-remove-sort.txt
+          sort ./resouces/proxy-need-remove.txt > ./proxy-need-to-remove-sort.txt
           diff ./direct-need-remove-sort.txt ./direct-list-without-redundant | awk '/^>/{print $2}' > temp-cn.txt
           diff ./proxy-need-remove-sort.txt ./proxy-list-without-redundant | awk '/^>/{print $2}' > temp-geolocation-\!cn.txt
           
