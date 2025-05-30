@@ -3,4 +3,5 @@ origin-a.akamaihd.net
 epicgames-download1.akamaized.net
 xboxlive.com
 xboxservices.com
+epicgamescdn.com
 zaimanhua.com
