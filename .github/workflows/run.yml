@@ -178,9 +178,6 @@ jobs:
           cat ../community/data/category-httpdns-cn >> ../community/data/reject_tmp
           sort --ignore-case -u ../community/data/reject_tmp > ../community/data/reject
           rm ../community/data/reject_tmp
-          echo "ipleak.net" >> ../community/data/geolocation-\!cn
-          echo "browserleaks.org" >> ../community/data/geolocation-\!cn
-          echo "browserleaks.com" >> ../community/data/geolocation-\!cn
           echo "amazon.com" >> ../community/data/aws
           echo "aws.dev" >> ../community/data/aws
           echo "aws.a2z.com" >> ../community/data/aws
