@@ -1,3 +1,4 @@
 hostloc.com
 nikke-kr.com
 intlgame.com
+services.googleapis.cn
