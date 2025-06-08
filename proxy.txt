@@ -1,1 +1,3 @@
 boomio-cdn.com
+immersivetranslate.cn
+services.googleapis.cn
