@@ -1,4 +1,5 @@
 hostloc.com
 nikke-kr.com
 intlgame.com
+immersivetranslate.cn
 services.googleapis.cn
