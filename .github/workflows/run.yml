@@ -118,8 +118,8 @@ jobs:
           cat temp-cn.txt | sort --ignore-case -u | perl -ne 'print if not /^((?=^.{3,255})[a-zA-Z0-9][-_:a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-_:a-zA-Z0-9]{0,62})+)/' > direct-tld-list.txt
           cat temp-geolocation-\!cn.txt | sort --ignore-case -u | perl -ne '/^((?=^.{1,255})[a-zA-Z0-9][-_:a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-_:a-zA-Z0-9]{0,62})*)/ && print "$1\n"' | perl -ne 'print if not /\.cn$/' > ./community/data/geolocation-\!cn
           cat temp-geolocation-\!cn.txt | sort --ignore-case -u | perl -ne 'print if not /^((?=^.{3,255})[a-zA-Z0-9][-_:a-zA-Z0-9]{0,62}(\.[a-zA-Z0-9][-_:a-zA-Z0-9]{0,62})+)/' > proxy-tld-list.txt
+          echo "googleapis.cn" >> ./community/data/geolocation-\!cn
           echo "immersivetranslate.cn" >> ./community/data/geolocation-\!cn
-          echo "services.googleapis.cn" >> ./community/data/geolocation-\!cn
           sort --ignore-case -u ./community/data/geolocation-\!cn -o ./community/data/geolocation-\!cn
           
       - name: Add `full`, `regexp` and `keyword` type of rules back into "cn", and "geolocation-!cn" list
