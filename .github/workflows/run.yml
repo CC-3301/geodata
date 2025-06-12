@@ -183,8 +183,9 @@ jobs:
           echo "amazon.com" >> ../community/data/aws
           echo "aws.dev" >> ../community/data/aws
           echo "aws.a2z.com" >> ../community/data/aws
-          sed -i 's/cloudfront.com//g' ../community/data/aws
-          sed -i 's/cloudfront.net//g' ../community/data/aws
+          sed -i '/cloudfront.com/d' ../community/data/aws
+          sed -i '/cloudfront.net/d' ../community/data/aws
+          sed -i "/test.steampowered.com//d" ../community/data/private
           go run ./ --datapath=../community/data
 
       - name: Get geoip.dat relative files
