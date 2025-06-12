@@ -174,7 +174,7 @@ jobs:
           cd custom || exit 1
           mkdir -p ../community/data
           curl -sSL ${Anti_AD} | grep -v '#' | sed '/^\s*$/d' >> ../community/data/anti-ad
-          cat ./fuckmiui.txt | grep -v '#' | sed '/^\s*$/d' >> ../community/data/fuck-miui
+          cat ../fuckmiui.txt | grep -v '#' | sed '/^\s*$/d' >> ../community/data/fuck-miui
           cat ../community/data/anti-ad >> ../community/data/reject
           cat ../community/data/fuck-miui >> ../community/data/reject
           cat ../community/data/category-ads-all >> ../community/data/reject
@@ -185,7 +185,7 @@ jobs:
           echo "aws.a2z.com" >> ../community/data/aws
           sed -i '/cloudfront.com/d' ../community/data/aws
           sed -i '/cloudfront.net/d' ../community/data/aws
-          sed -i "/test.steampowered.com//d" ../community/data/private
+          sed -i '/test.steampowered.com/d' ../community/data/private
           go run ./ --datapath=../community/data
 
       - name: Get geoip.dat relative files
