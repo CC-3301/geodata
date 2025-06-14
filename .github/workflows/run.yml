@@ -186,7 +186,7 @@ jobs:
           sed -i '/cloudfront.com/d' ../community/data/aws
           sed -i '/cloudfront.net/d' ../community/data/aws
           sed -i '/test.steampowered.com/d' ../community/data/private
-          cat ../community/data/private | grep -v '#' | sed '/^\s*$/d' | sort --ignore-case -u -o ../community/data/private
+          sed -i '/^#/d; /^\s*$/d' ../community/data/private
           go run ./ --datapath=../community/data
 
       - name: Get geoip.dat relative files
